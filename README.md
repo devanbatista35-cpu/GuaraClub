@@ -1,4 +1,4 @@
-# # <img src="imagens/guara-emoji.png" width="40" align="center" /> GuaraClub
+# 🦊 GuaraClub
 
 Uma comunidade digital para estudantes e profissionais de tecnologia compartilharem conhecimento, acompanharem oportunidades e desenvolverem projetos juntos.
 
