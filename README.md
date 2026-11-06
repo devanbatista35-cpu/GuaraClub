@@ -1,4 +1,4 @@
-# GuaraClub
+# <img width="128" height="128" alt="image" src="https://github.com/user-attachments/assets/4008a89a-b816-49ea-b4a6-7d5bf6e3c810" /> GuaraClub
 
 Uma comunidade digital para estudantes e profissionais de tecnologia compartilharem conhecimento, acompanharem oportunidades e desenvolverem projetos juntos.
 
