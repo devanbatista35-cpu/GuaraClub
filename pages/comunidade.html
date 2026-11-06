@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GuaraClub – Comunidade</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="top">
+      <button class="pill" id="themeBtn">💡</button>
+      <a class="pill" href="chat.html">💬 Chat</a>
+      <button class="pill" onclick="alert('🔍 Pesquisa (protótipo)')">🔍 Pesquisa</button>
+      <nav class="nav">
+        <a href="sobre.html">Sobre</a>
+        <a href="comunidade.html" class="on">Comunidade</a>
+        <a href="vagas.html">Vagas</a>
+        <a href="novidades.html">Novidades</a>
+        <a href="devs.html">Devs</a>
+        <a href="../index.html">Sair</a>
+      </nav>
+    </div>
+
+    <div class="cols">
+      <div>
+        <div class="box">
+          <span class="ttl">Sugestões</span>
+          <div class="sug">
+            <div class="pc"><div class="av">👩</div><b>Alice Pereira</b><br>32, Curitiba, PR<em>8 amigos em comum</em><button onclick="this.textContent='ENVIADO ✓';this.className='ok'">ADICIONAR</button></div>
+            <div class="pc"><div class="av">🧔</div><b>Bruno Silva</b><br>29, São Paulo, SP<em>Estudou na USP</em><button onclick="this.textContent='ENVIADO ✓';this.className='ok'">ADICIONAR</button></div>
+            <div class="pc"><div class="av">👩🏾</div><b>Camila Lima</b><br>27, Rio de Janeiro, RJ<em>Trabalha na TechCorp</em><button onclick="this.textContent='ENVIADO ✓';this.className='ok'">ADICIONAR</button></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="box">
+          <div class="tabs">
+            <button class="on">Grupos</button>
+            <button>Projetos</button>
+            <button>Q&A</button>
+            <button>Parceiros</button>
+          </div>
+          <div class="inner">
+            <div class="post w" style="text-align:center">
+              <b style="color:#f3dcc0;font-size:18px">Fórum de Dúvidas e Discussões (Q&A)</b><br>
+              <i>Espaço para devs tirarem dúvidas sobre código, arquitetura e bancos de dados.</i>
+            </div>
+            <div class="post w" style="text-align:center">
+              <b style="color:#f3dcc0;font-size:18px">Projetos dos Membros (Showcase)</b><br>
+              <i>Publique projetos, portfólios e ideias para receber feedback da comunidade.</i>
+            </div>
+            <div class="post w" style="text-align:center">
+              <b style="color:#f3dcc0;font-size:18px">Busca de Parceiros de Projeto</b><br>
+              <i>Encontre programadores para colaborar em open-source, startups ou side-projects.</i>
+            </div>
+            <div class="post w" style="text-align:center">
+              <b style="color:#f3dcc0;font-size:18px">Grupos de Estudo</b><br>
+              <i>Tópicos dedicados onde alunos e profissionais compartilham links, livros e exercícios.</i>
+            </div>
+            <div style="text-align:center;font-weight:700">#GuaraClub #Tecnologia #Novidades</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <span>Sobre • Comunidade • Vagas • Novidades • Devs • Sair</span>
+      <span>© 2026 GuaraClub Tech. Todos os direitos reservados.<br>Developed by GuaraClub Tech</span>
+      <span>"Sob o mesmo céu, sonhamos alto"</span>
+    </footer>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

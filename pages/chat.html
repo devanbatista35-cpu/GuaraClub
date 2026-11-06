@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GuaraClub – Chat</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="top">
+      <button class="pill" id="themeBtn">💡</button>
+      <a class="pill" href="home.html">☰ Home</a>
+      <button class="pill" onclick="alert('🔍 Pesquisa (protótipo)')">🔍 Pesquisa</button>
+      <nav class="nav">
+        <a href="sobre.html">Sobre</a>
+        <a href="comunidade.html">Comunidade</a>
+        <a href="vagas.html">Vagas</a>
+        <a href="novidades.html">Novidades</a>
+        <a href="devs.html">Devs</a>
+        <a href="../index.html">Sair</a>
+      </nav>
+    </div>
+
+    <div class="cols">
+      <div>
+        <div class="box">
+          <span class="ttl">Sugestões</span>
+          <div class="sug">
+            <div class="pc"><div class="av">👩</div><b>Alice Pereira</b><br>32, Curitiba, PR<em>8 amigos em comum</em><button onclick="this.textContent='ENVIADO ✓';this.className='ok'">ADICIONAR</button></div>
+            <div class="pc"><div class="av">🧔</div><b>Bruno Silva</b><br>29, São Paulo, SP<em>Estudou na USP</em><button onclick="this.textContent='ENVIADO ✓';this.className='ok'">ADICIONAR</button></div>
+            <div class="pc"><div class="av">👩🏾</div><b>Camila Lima</b><br>27, Rio de Janeiro, RJ<em>Trabalha na TechCorp</em><button onclick="this.textContent='ENVIADO ✓';this.className='ok'">ADICIONAR</button></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="box">
+          <div class="tabs">
+            <button class="on">Mensagens</button>
+            <button>Grupos</button>
+            <button>Solicitações</button>
+          </div>
+          <div class="inner">
+            <div class="chat" id="chatArea">
+              <div class="m">
+                <div class="av">👩‍🦱</div>
+                <div class="bub"><b style="color:#4aa3ff">Ana</b>Genteee, vocês viram que agora tá tudo tendo inteligência artificial? 😂</div>
+              </div>
+              <div class="m">
+                <div class="av">👩🏻</div>
+                <div class="bub"><b style="color:#ff8d8d">Bia</b>SIM KKKKK<br>Daqui a pouco a IA vai fazer até nosso trabalho da faculdade.</div>
+              </div>
+              <div class="m">
+                <div class="av">👩‍🦰</div>
+                <div class="bub"><b style="color:#5fe08a">Carol</b>Amiga, daqui a pouco? 👀<br>Já faz tempo que ela tá ajudando a gente KKKKK</div>
+              </div>
+              <div class="m">
+                <div class="av">👩‍🦱</div>
+                <div class="bub"><b style="color:#4aa3ff">Ana</b>Pior que é verdade 😂<br>Eu usei pra entender um código em C ontem.</div>
+              </div>
+              <div id="mine"></div>
+            </div>
+            <div class="in">
+              <input id="mi" placeholder="Mensagens">
+              <button type="button">📎</button>
+              <button type="button" id="sendBtn">➤</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <span>Sobre • Comunidade • Vagas • Novidades • Devs • Sair</span>
+      <span>© 2026 GuaraClub Tech. Todos os direitos reservados.<br>Developed by GuaraClub Tech</span>
+      <span>"Sob o mesmo céu, sonhamos alto"</span>
+    </footer>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
