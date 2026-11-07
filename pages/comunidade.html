@@ -45,29 +45,100 @@
       <div>
         <div class="box">
           <div class="tabs">
-            <button class="on">Grupos</button>
-            <button>Projetos</button>
-            <button>Q&A</button>
-            <button>Parceiros</button>
+            <button type="button" class="on" data-community-tab="groups" aria-selected="true">Grupos</button>
+            <button type="button" data-community-tab="projects" aria-selected="false">Projetos</button>
+            <button type="button" data-community-tab="qa" aria-selected="false">Q&amp;A</button>
+            <button type="button" data-community-tab="partners" aria-selected="false">Parceiros</button>
           </div>
-          <div class="inner">
-            <div class="post w" style="text-align:center">
-              <b style="color:#f3dcc0;font-size:18px">Fórum de Dúvidas e Discussões (Q&A)</b><br>
-              <i>Espaço para devs tirarem dúvidas sobre código, arquitetura e bancos de dados.</i>
-            </div>
-            <div class="post w" style="text-align:center">
-              <b style="color:#f3dcc0;font-size:18px">Projetos dos Membros (Showcase)</b><br>
-              <i>Publique projetos, portfólios e ideias para receber feedback da comunidade.</i>
-            </div>
-            <div class="post w" style="text-align:center">
-              <b style="color:#f3dcc0;font-size:18px">Busca de Parceiros de Projeto</b><br>
-              <i>Encontre programadores para colaborar em open-source, startups ou side-projects.</i>
-            </div>
-            <div class="post w" style="text-align:center">
-              <b style="color:#f3dcc0;font-size:18px">Grupos de Estudo</b><br>
-              <i>Tópicos dedicados onde alunos e profissionais compartilham links, livros e exercícios.</i>
-            </div>
-            <div style="text-align:center;font-weight:700">#GuaraClub #Tecnologia #Novidades</div>
+          <div class="inner community-content">
+            <section class="community-panel" data-community-panel="groups" aria-label="Grupos">
+              <article class="post w community-card">
+                <b>Fórum de Dúvidas e Discussões</b>
+                <p>Converse sobre código, arquitetura, bancos de dados e desafios do dia a dia.</p>
+                <span class="community-tag">#Q&amp;A #Desenvolvimento</span>
+              </article>
+              <article class="post w community-card">
+                <b>Projetos dos Membros</b>
+                <p>Compartilhe portfólios e ideias para receber feedback da comunidade.</p>
+                <span class="community-tag">#Showcase #Portfólio</span>
+              </article>
+              <article class="post w community-card">
+                <b>Busca de Parceiros</b>
+                <p>Encontre pessoas para colaborar em projetos open source, startups ou side projects.</p>
+                <span class="community-tag">#Colaboração #OpenSource</span>
+              </article>
+              <article class="post w community-card">
+                <b>Grupos de Estudo</b>
+                <p>Compartilhe materiais, livros e exercícios enquanto aprende em conjunto.</p>
+                <span class="community-tag">#Estudos #Aprendizado</span>
+              </article>
+            </section>
+            <section class="community-panel" data-community-panel="projects" aria-label="Projetos" hidden>
+              <article class="post w community-card">
+                <b>GuaraTask</b>
+                <p>Aplicação web para organizar tarefas e acompanhar a rotina de estudos.</p>
+                <span class="community-tag">React · Organização</span>
+              </article>
+              <article class="post w community-card">
+                <b>EcoRota</b>
+                <p>Mapa colaborativo que reúne pontos de coleta seletiva por região.</p>
+                <span class="community-tag">Mapas · Sustentabilidade</span>
+              </article>
+              <article class="post w community-card">
+                <b>DevMatch</b>
+                <p>Plataforma para encontrar colaboradores com interesses e habilidades em comum.</p>
+                <span class="community-tag">Comunidade · JavaScript</span>
+              </article>
+              <article class="post w community-card">
+                <b>Finanças em Dia</b>
+                <p>Painel simples para registrar despesas e visualizar o orçamento mensal.</p>
+                <span class="community-tag">Python · Dados</span>
+              </article>
+            </section>
+            <section class="community-panel" data-community-panel="qa" aria-label="Perguntas e respostas" hidden>
+              <article class="post w community-card">
+                <b>Como organizar componentes em um projeto React?</b>
+                <p>Estou começando uma aplicação maior. Como vocês separam componentes, páginas e estilos?</p>
+                <span class="community-tag">React · 8 respostas</span>
+              </article>
+              <article class="post w community-card">
+                <b>Quando devo usar índices no banco de dados?</b>
+                <p>Quais consultas se beneficiam de índices e que impacto eles têm nas gravações?</p>
+                <span class="community-tag">Banco de dados · 5 respostas</span>
+              </article>
+              <article class="post w community-card">
+                <b>Qual a melhor forma de tratar erros em uma API?</b>
+                <p>Quero padronizar as respostas de erro sem esconder detalhes importantes para depuração.</p>
+                <span class="community-tag">Back-end · 12 respostas</span>
+              </article>
+              <article class="post w community-card">
+                <b>Como montar meu primeiro portfólio?</b>
+                <p>Quais projetos e informações são mais úteis para apresentar em uma vaga de estágio?</p>
+                <span class="community-tag">Carreira · 6 respostas</span>
+              </article>
+            </section>
+            <section class="community-panel" data-community-panel="partners" aria-label="Parceiros de projeto" hidden>
+              <article class="post w community-card">
+                <b>Aplicativo de hábitos de estudo</b>
+                <p>Procura pessoa de front-end para criar uma interface acessível para estudantes.</p>
+                <span class="community-tag">React · Front-end</span>
+              </article>
+              <article class="post w community-card">
+                <b>Projeto open source de acessibilidade</b>
+                <p>Convite para colaborar em melhorias de acessibilidade em sites e ferramentas.</p>
+                <span class="community-tag">Open source · Acessibilidade</span>
+              </article>
+              <article class="post w community-card">
+                <b>Dashboard de dados públicos</b>
+                <p>Buscando parceria para transformar conjuntos de dados públicos em visualizações.</p>
+                <span class="community-tag">Python · Visualização de dados</span>
+              </article>
+              <article class="post w community-card">
+                <b>Jogo educativo para navegador</b>
+                <p>Grupo iniciando um jogo web para ensinar lógica de programação de forma interativa.</p>
+                <span class="community-tag">JavaScript · Jogos</span>
+              </article>
+            </section>
           </div>
         </div>
       </div>

@@ -616,6 +616,37 @@ input.f::placeholder {
   color: #f3dcc0;
 }
 
+.community-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.community-panel[hidden] {
+  display: none;
+}
+
+.community-card {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.community-card b {
+  display: block;
+  margin-bottom: 6px;
+  color: #f3dcc0;
+  font-size: 17px;
+}
+
+.community-card p {
+  margin: 0 0 8px;
+}
+
+.community-tag {
+  color: #f3dcc0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -777,28 +808,100 @@ input.f::placeholder {
   margin: 0 0 16px;
 }
 
-.dev {
+.dev-profile {
   display: flex;
-  justify-content: center;
-  gap: 16px;
   align-items: center;
-  font-weight: 700;
-  font-size: 19px;
-  margin: 10px 0;
-  flex-wrap: wrap;
+  gap: 16px;
+  padding: 14px 4px;
+  border-bottom: 1px solid #ffffff35;
 }
 
-.dev span a {
+.dev-profile:last-child {
+  border-bottom: 0;
+}
+
+.dev-photo {
+  flex: 0 0 80px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dev-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.dev-info h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.dev-info p {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.devs-intro {
+  line-height: 1.6;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.dev-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.dev-links a {
   display: inline-grid;
   place-items: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: #fff;
-  margin-left: 4px;
-  font-size: 13px;
-  color: #333;
-  font-weight: 800;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  color: #fff;
+  background: #ffffff24;
+}
+
+.dev-links a:hover {
+  background: #ffffff45;
+}
+
+.dev-links svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.dev-links a:nth-child(2) svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.dev-links .icon-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+@media(max-width: 600px) {
+  .dev-profile {
+    gap: 12px;
+  }
+
+  .dev-photo {
+    flex-basis: 60px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .dev-info h3 {
+    font-size: 15px;
+  }
 }
 
 .mut {

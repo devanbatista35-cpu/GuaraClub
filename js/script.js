@@ -263,6 +263,23 @@ if (conversationList && messageThread && chatArea) {
   }
 }
 
+const communityTabs = document.querySelectorAll('[data-community-tab]');
+const communityPanels = document.querySelectorAll('[data-community-panel]');
+
+communityTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const selectedPanel = tab.dataset.communityTab;
+    communityTabs.forEach((item) => {
+      const isSelected = item === tab;
+      item.classList.toggle('on', isSelected);
+      item.setAttribute('aria-selected', String(isSelected));
+    });
+    communityPanels.forEach((panel) => {
+      panel.hidden = panel.dataset.communityPanel !== selectedPanel;
+    });
+  });
+});
+
 // Enviar Mensagem no Chat
 const sendBtn = document.getElementById('sendBtn');
 const inputMsg = document.getElementById('mi');
