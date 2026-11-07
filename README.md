@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="./images/logo_guararedondo.jpeg" alt="Logo GuaraClub" width="160">
+  <img src="./images/logo_guararedondo-circular.png" alt="Logo redondo do GuaraClub" width="160" height="160">
 </p>
 
 Uma comunidade digital para estudantes e profissionais de tecnologia compartilharem conhecimento, acompanharem oportunidades e desenvolverem projetos juntos.

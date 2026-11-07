@@ -931,6 +931,34 @@ input.f::placeholder {
   margin: 0 0 16px;
 }
 
+.about-logo {
+  display: block;
+  width: clamp(100px, 16vw, 150px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 3px solid #f3dcc0;
+  border-radius: 50%;
+  margin: 4px auto 20px;
+  box-shadow: 0 8px 20px #0004;
+}
+
+.about .about-lead {
+  margin-bottom: 18px;
+  color: #f3dcc0;
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.about .about-signoff {
+  margin: 22px 0 0;
+  color: #f3dcc0;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+}
+
 .dev-profile {
   display: flex;
   align-items: center;
