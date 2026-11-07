@@ -8,6 +8,38 @@ if (themeBtn) {
   });
 }
 
+const searchOpenButtons = document.querySelectorAll('[data-search-open]');
+if (searchOpenButtons.length) {
+  const searchDialog = document.createElement('dialog');
+  searchDialog.className = 'search-dialog';
+  searchDialog.setAttribute('aria-labelledby', 'search-dialog-title');
+  searchDialog.innerHTML = `
+    <h2 id="search-dialog-title">Pesquisar no GuaraClub</h2>
+    <form method="dialog">
+      <input type="search" name="query" placeholder="O que você está procurando?" aria-label="Texto para pesquisar">
+      <div class="search-dialog-actions">
+        <button type="button" data-search-close>Fechar</button>
+        <button type="submit">Pesquisar</button>
+      </div>
+    </form>
+  `;
+  document.body.appendChild(searchDialog);
+
+  const searchInput = searchDialog.querySelector('input');
+  searchOpenButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      searchDialog.showModal();
+      searchInput.focus();
+    });
+  });
+  searchDialog.querySelector('[data-search-close]').addEventListener('click', () => {
+    searchDialog.close();
+  });
+  searchDialog.addEventListener('click', (event) => {
+    if (event.target === searchDialog) searchDialog.close();
+  });
+}
+
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.getElementById('main-nav');
 
