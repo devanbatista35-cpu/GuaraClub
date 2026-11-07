@@ -240,6 +240,21 @@ input.f::placeholder {
   align-items: start;
 }
 
+@media(min-width: 861px) {
+  .chat-page .cols {
+    align-items: stretch;
+  }
+
+  .chat-page .cols > div:first-child {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chat-page .cols > div:first-child > .side {
+    flex: 1;
+  }
+}
+
 .box {
   border: 2px solid var(--line);
   border-radius: 22px;
@@ -354,7 +369,8 @@ input.f::placeholder {
 .conversation-list {
   display: flex;
   flex-direction: column;
-  max-height: min(60vh, 480px);
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-color: #ffffff40 transparent;
@@ -374,10 +390,78 @@ input.f::placeholder {
   border-radius: 999px;
 }
 
+.request-panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  gap: 16px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: #ffffff40 transparent;
+  scrollbar-width: thin;
+}
+
+.request-panel::-webkit-scrollbar {
+  width: 5px;
+}
+
+.request-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.request-panel::-webkit-scrollbar-thumb {
+  background: #ffffff40;
+  border-radius: 999px;
+}
+
 .conversation-list[hidden],
+.request-panel[hidden],
 .thread-header[hidden],
 #messageThread[hidden] {
   display: none;
+}
+
+.request-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 8px 8px;
+  font-size: 15px;
+}
+
+.request-section h3 span {
+  display: inline-grid;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 5px;
+  place-items: center;
+  border-radius: 999px;
+  background: #e8813f;
+  font-size: 12px;
+}
+
+.request-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 8px;
+  border-bottom: 1px solid #ffffff35;
+}
+
+.request-item:last-child {
+  border-bottom: 0;
+}
+
+.request-item .conversation-avatar {
+  flex-basis: 40px;
+  width: 40px;
+  height: 40px;
+  font-size: 21px;
+}
+
+.request-item .conversation-preview {
+  white-space: normal;
 }
 
 .conversation-item {
@@ -483,6 +567,24 @@ input.f::placeholder {
   padding: 14px;
 }
 
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  height: min(70vh, 560px);
+  min-height: 280px;
+}
+
+#messageThread {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.chat-panel .thread-header {
+  flex: 0 0 auto;
+}
+
 .post {
   background: #ffffff40;
   border: 2px solid #fff6;
@@ -547,9 +649,10 @@ input.f::placeholder {
 
 .chat {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 12px;
-  max-height: min(60vh, 480px);
+  min-height: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
   padding: 2px 6px 2px 2px;
@@ -602,6 +705,7 @@ input.f::placeholder {
 
 .in {
   display: flex;
+  flex: 0 0 auto;
   gap: 8px;
   margin-top: 12px;
 }

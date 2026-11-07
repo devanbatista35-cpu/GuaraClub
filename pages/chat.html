@@ -49,8 +49,18 @@
             <button type="button" class="on" data-chat-tab="groups">Grupos</button>
             <button type="button" data-chat-tab="requests">Solicitações</button>
           </div>
-          <div class="inner">
+          <div class="inner chat-panel">
             <div class="conversation-list" id="conversationList" hidden aria-label="Conversas"></div>
+            <div class="request-panel" id="requestPanel" hidden aria-label="Solicitações">
+              <section class="request-section">
+                <h3>Solicitações de mensagem <span>4</span></h3>
+                <div id="messageRequests"></div>
+              </section>
+              <section class="request-section">
+                <h3>Solicitações de amizade <span>3</span></h3>
+                <div id="friendRequests"></div>
+              </section>
+            </div>
             <div id="messageThread">
               <div class="thread-header" id="threadHeader" hidden>
                 <button class="thread-back" id="backToConversations" type="button" aria-label="Voltar para conversas">
