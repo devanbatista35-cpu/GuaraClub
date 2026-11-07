@@ -1,10 +1,17 @@
 // Alternar Tema (Claro / Escuro)
+const savedTheme = localStorage.getItem('guaraclub-theme');
+if (savedTheme === 'light' || savedTheme === 'dark') {
+  document.documentElement.dataset.theme = savedTheme;
+}
+
 const themeBtn = document.getElementById('themeBtn');
 if (themeBtn) {
   themeBtn.addEventListener('click', () => {
     const currentTheme = document.documentElement.dataset.theme
       || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    document.documentElement.dataset.theme = currentTheme === 'dark' ? 'light' : 'dark';
+    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = nextTheme;
+    localStorage.setItem('guaraclub-theme', nextTheme);
   });
 }
 
