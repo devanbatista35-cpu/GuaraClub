@@ -39,35 +39,108 @@
           <span class="ttl">Destaques Do Dia</span>
           <div class="hl">🤖 IA generativa segue revolucionando o mercado de trabalho em 2026. Empresas que se adaptam saem na frente.</div>
           <div class="hl">📱 Novos smartphones chegam com câmeras ainda mais inteligentes e bateria que dura o dia todo.</div>
+          <div class="hl">🧭 GuaraClub reúne comunidade, oportunidades e novidades em um só lugar.</div>
         </div>
       </div>
 
       <div>
         <div class="box">
           <div class="tabs">
-            <button class="on">Tendências</button>
-            <button>Eventos</button>
-            <button>Tecnologias</button>
-            <button>Atualizações</button>
+            <button type="button" class="on" data-news-tab="trends" aria-selected="true">Tendências</button>
+            <button type="button" data-news-tab="events" aria-selected="false">Eventos</button>
+            <button type="button" data-news-tab="technologies" aria-selected="false">Tecnologias</button>
+            <button type="button" data-news-tab="updates" aria-selected="false">Atualizações</button>
           </div>
           <div class="inner">
-            <div class="post w" style="text-align:center">
-              <b style="color:#f3dcc0;font-size:18px">Feed de Tendências de Tecnologia</b><br>
-              <i>Artigos curtos e destaques sobre IA, desenvolvimento de software, cloud e novas linguagens.</i>
-            </div>
-            <div class="post w" style="text-align:center">
-              <b style="color:#f3dcc0;font-size:18px">Atualizações do Ecossistema GuaraClub</b><br>
-              <i>Novos recursos da plataforma, parcerias com empresas de TI e relatórios de mercado.</i>
-            </div>
-            <div class="post w" style="text-align:center">
-              <b style="color:#f3dcc0;font-size:18px">Lançamentos de Ferramentas e Frameworks</b><br>
-              <i>Boletins rápidos cobrindo novas versões de tecnologias populares como React e Node.js.</i>
-            </div>
-            <div class="post w" style="text-align:center">
-              <b style="color:#f3dcc0;font-size:18px">Eventos e Hackathons</b><br>
-              <i>Agenda com próximos webinars, encontros presenciais e competições de programação.</i>
-            </div>
-            <div style="text-align:center;font-weight:700">#GuaraClub #Tecnologia #Novidades</div>
+            <section class="news-panel" data-news-panel="trends" aria-label="Tendências">
+              <article class="post w news-card">
+                <h4>IA generativa transforma o desenvolvimento de software</h4>
+                <p>Assistentes de código estão acelerando tarefas repetitivas e ampliando o espaço para revisão, arquitetura e criatividade.</p>
+                <span class="news-meta">Inteligência artificial · Mercado</span>
+              </article>
+              <article class="post w news-card">
+                <h4>Cloud e edge computing aproximam o processamento dos usuários</h4>
+                <p>Aplicações distribuídas combinam a escala da nuvem com respostas mais rápidas em dispositivos e pontos locais.</p>
+                <span class="news-meta">Cloud · Infraestrutura</span>
+              </article>
+              <article class="post w news-card">
+                <h4>Segurança desde o início ganha espaço nas equipes</h4>
+                <p>Práticas de desenvolvimento seguro entram cada vez mais cedo no ciclo de criação e manutenção de produtos.</p>
+                <span class="news-meta">Segurança · Boas práticas</span>
+              </article>
+              <article class="post w news-card">
+                <h4>Comunidades abertas impulsionam o aprendizado em tecnologia</h4>
+                <p>Projetos colaborativos ajudam estudantes e profissionais a trocar conhecimento e construir soluções juntos.</p>
+                <span class="news-meta">Comunidade · Open source</span>
+              </article>
+            </section>
+            <section class="news-panel" data-news-panel="events" aria-label="Eventos" hidden>
+              <article class="post w news-card">
+                <h4>Encontro GuaraClub: caminhos para a primeira vaga em tecnologia</h4>
+                <p>Conversa aberta sobre portfólio, entrevistas e como se preparar para oportunidades de entrada.</p>
+                <span class="news-meta">12 nov 2026 · Online</span>
+              </article>
+              <article class="post w news-card">
+                <h4>Hackathon de soluções para a comunidade</h4>
+                <p>Forme uma equipe, escolha um desafio local e desenvolva um protótipo durante o fim de semana.</p>
+                <span class="news-meta">21–22 nov 2026 · Curitiba, PR</span>
+              </article>
+              <article class="post w news-card">
+                <h4>Workshop prático de APIs com JavaScript</h4>
+                <p>Uma sessão guiada para criar endpoints, validar dados e conectar uma aplicação a uma API.</p>
+                <span class="news-meta">28 nov 2026 · Online</span>
+              </article>
+              <article class="post w news-card">
+                <h4>Roda de conversa sobre carreira em dados</h4>
+                <p>Profissionais convidados compartilham experiências com análise de dados, ferramentas e primeiros passos.</p>
+                <span class="news-meta">5 dez 2026 · Online</span>
+              </article>
+            </section>
+            <section class="news-panel" data-news-panel="technologies" aria-label="Tecnologias" hidden>
+              <article class="post w news-card">
+                <h4>TypeScript fortalece a manutenção de aplicações web</h4>
+                <p>Tipos explícitos ajudam equipes a identificar problemas mais cedo e a evoluir bases de código compartilhadas.</p>
+                <span class="news-meta">Linguagens · Front-end</span>
+              </article>
+              <article class="post w news-card">
+                <h4>WebAssembly expande opções para aplicações no navegador</h4>
+                <p>O formato permite levar mais linguagens e cargas de trabalho para experiências web com bom desempenho.</p>
+                <span class="news-meta">Web · Desempenho</span>
+              </article>
+              <article class="post w news-card">
+                <h4>Contêineres simplificam ambientes de desenvolvimento</h4>
+                <p>Ambientes reproduzíveis ajudam a reduzir diferenças entre máquinas locais, integração e produção.</p>
+                <span class="news-meta">DevOps · Cloud</span>
+              </article>
+              <article class="post w news-card">
+                <h4>Bancos de dados vetoriais apoiam buscas semânticas</h4>
+                <p>Representações vetoriais permitem explorar novas formas de encontrar conteúdos por significado e contexto.</p>
+                <span class="news-meta">Dados · Inteligência artificial</span>
+              </article>
+            </section>
+            <section class="news-panel" data-news-panel="updates" aria-label="Atualizações do GuaraClub" hidden>
+              <article class="post w news-card">
+                <h4>Novas áreas de Projetos, Q&amp;A e Parceiros</h4>
+                <p>A comunidade agora tem espaços dedicados para compartilhar projetos, tirar dúvidas e encontrar colaboradores.</p>
+                <span class="news-meta">GuaraClub · Comunidade</span>
+              </article>
+              <article class="post w news-card">
+                <h4>Chat com conversas e solicitações</h4>
+                <p>A página de chat reúne conversas, grupos e solicitações em abas para facilitar o contato entre membros.</p>
+                <span class="news-meta">GuaraClub · Comunicação</span>
+              </article>
+              <article class="post w news-card">
+                <h4>Conheça quem constrói a comunidade</h4>
+                <p>A página de desenvolvedores apresenta os membros do time e seus perfis profissionais.</p>
+                <span class="news-meta">GuaraClub · Equipe</span>
+              </article>
+              <article class="post w news-card">
+                <h4>Experiência adaptada para celular</h4>
+                <p>A navegação responsiva e o menu compacto ajudam a acessar as páginas do GuaraClub em telas menores.</p>
+                <span class="news-meta">GuaraClub · Melhorias</span>
+              </article>
+            </section>
+            <div class="news-footer">#GuaraClub #Tecnologia #Novidades</div>
             <div style="text-align:center;margin-top:12px">
               <a class="pill" href="mutirao.html" style="display:inline-block">🚨 Ver Mutirão de Caça-Bugs de hoje</a>
             </div>

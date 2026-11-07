@@ -647,6 +647,40 @@ input.f::placeholder {
   font-weight: 700;
 }
 
+.news-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.news-panel[hidden] {
+  display: none;
+}
+
+.news-card {
+  margin-bottom: 0;
+}
+
+.news-card h4 {
+  color: #f3dcc0;
+  font-size: 17px;
+}
+
+.news-card p {
+  margin: 0 0 8px;
+}
+
+.news-meta {
+  color: #f3dcc0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.news-footer {
+  margin-top: 14px;
+  text-align: center;
+  font-weight: 700;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

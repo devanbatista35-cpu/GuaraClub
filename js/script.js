@@ -280,6 +280,23 @@ communityTabs.forEach((tab) => {
   });
 });
 
+const newsTabs = document.querySelectorAll('[data-news-tab]');
+const newsPanels = document.querySelectorAll('[data-news-panel]');
+
+newsTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const selectedPanel = tab.dataset.newsTab;
+    newsTabs.forEach((item) => {
+      const isSelected = item === tab;
+      item.classList.toggle('on', isSelected);
+      item.setAttribute('aria-selected', String(isSelected));
+    });
+    newsPanels.forEach((panel) => {
+      panel.hidden = panel.dataset.newsPanel !== selectedPanel;
+    });
+  });
+});
+
 // Enviar Mensagem no Chat
 const sendBtn = document.getElementById('sendBtn');
 const inputMsg = document.getElementById('mi');
