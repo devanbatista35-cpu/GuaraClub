@@ -45,11 +45,21 @@
       <div>
         <div class="box">
           <div class="tabs">
-            <button class="on">Mensagens</button>
-            <button>Grupos</button>
-            <button>Solicitações</button>
+            <button type="button" data-chat-tab="messages">Mensagens</button>
+            <button type="button" class="on" data-chat-tab="groups">Grupos</button>
+            <button type="button" data-chat-tab="requests">Solicitações</button>
           </div>
           <div class="inner">
+            <div class="conversation-list" id="conversationList" hidden aria-label="Conversas"></div>
+            <div id="messageThread">
+              <div class="thread-header" id="threadHeader" hidden>
+                <button class="thread-back" id="backToConversations" type="button" aria-label="Voltar para conversas">
+                  <svg class="back-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M19 12H5m0 0 6 6m-6-6 6-6"></path>
+                  </svg>
+                </button>
+                <b id="threadName"></b>
+              </div>
             <div class="chat" id="chatArea">
               <div class="m">
                 <div class="av">👩‍🦱</div>
@@ -71,8 +81,14 @@
             </div>
             <div class="in">
               <input id="mi" placeholder="Mensagens">
-              <button type="button">📎</button>
+              <button type="button" aria-label="Gravar áudio">
+                <svg class="mic-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <rect x="9" y="3" width="6" height="12" rx="3"></rect>
+                  <path d="M5 11a7 7 0 0 0 14 0M12 18v3m-4 0h8"></path>
+                </svg>
+              </button>
               <button type="button" id="sendBtn">➤</button>
+            </div>
             </div>
           </div>
         </div>
