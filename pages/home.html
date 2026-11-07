@@ -42,7 +42,7 @@
             </div>
             <div class="pc">
               <div class="av">👩🏾</div>
-              <b>Camila Lima</b><br>27, Rio de Janeiro, RJ<em>Trabalha na TechCorp</em>
+              <b>Camila Lima</b><br>27, Bahia<em>Trabalha na TechCorp</em>
               <button onclick="this.textContent='ENVIADO ✓';this.className='ok'">ADICIONAR</button>
             </div>
           </div>
@@ -76,19 +76,41 @@
         </div>
 
         <div class="box">
-          <div class="tabs">
-            <button class="on">Suas Publicações</button>
-            <button>Notícias</button>
-            <button>Comentários</button>
-            <button>Pessoas</button>
+          <div class="tabs home-tabs">
+            <button type="button" class="on" data-home-tab="publications" aria-selected="true">Suas Publicações</button>
+            <button type="button" data-home-tab="people" aria-selected="false">Pessoas</button>
           </div>
-          <div class="post">
-            Passei o fim de semana estudando uma tecnologia nova e me lembrei por que amo essa área. Sempre tem algo novo pra aprender! 🚀
-            <div class="t">#DevLife #AprendizadoContínuo</div>
+          <div class="home-panel" data-home-panel="publications" aria-label="Suas publicações">
+            <article class="post">
+              Passei o fim de semana estudando uma tecnologia nova e me lembrei por que amo essa área. Sempre tem algo novo pra aprender! 🚀
+              <div class="t">#DevLife #AprendizadoContínuo</div>
+            </article>
+            <article class="post w">
+              Feliz em compartilhar que comecei um novo desafio profissional essa semana! Gratidão por essa oportunidade. 🙌
+              <div class="t">#NovosDesafios #Carreira</div>
+            </article>
+            <article class="post">
+              Hoje finalizei meu primeiro projeto usando uma API e aprendi muito durante o processo. Próximo passo: melhorar a interface! 💻
+              <div class="t">#ProjetoPessoal #Programação</div>
+            </article>
           </div>
-          <div class="post w">
-            Feliz em compartilhar que comecei um novo desafio profissional essa semana! Gratidão por essa oportunidade. 🙌
-            <div class="t">#NovosDesafios #Carreira</div>
+          <div class="home-panel" data-home-panel="people" aria-label="Comentários de pessoas" hidden>
+            <article class="post">
+              <b>Ana Costa</b>
+              <p>Adorei a iniciativa! Qual tecnologia você usou para começar?</p>
+            </article>
+            <article class="post w">
+              <b>Bruno Silva</b>
+              <p>Parabéns pela conquista! Compartilha mais sobre esse projeto com a gente.</p>
+            </article>
+            <article class="post">
+              <b>Camila Lima</b>
+              <p>Também estou estudando esse assunto. Seu relato me motivou a continuar! 🙌</p>
+            </article>
+            <article class="post w">
+              <b>Diego Santos</b>
+              <p>Ficou muito legal! Se quiser, posso testar e te passar algumas sugestões. 🚀</p>
+            </article>
           </div>
         </div>
       </div>

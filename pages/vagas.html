@@ -32,7 +32,7 @@
           <div class="sug">
             <div class="pc"><div class="av">👩</div><b>Alice Pereira</b><br>32, Curitiba, PR<em>8 amigos em comum</em><button onclick="this.textContent='ENVIADO ✓';this.className='ok'">ADICIONAR</button></div>
             <div class="pc"><div class="av">🧔</div><b>Bruno Silva</b><br>29, São Paulo, SP<em>Estudou na USP</em><button onclick="this.textContent='ENVIADO ✓';this.className='ok'">ADICIONAR</button></div>
-            <div class="pc"><div class="av">👩🏾</div><b>Camila Lima</b><br>27, Rio de Janeiro, RJ<em>Trabalha na TechCorp</em><button onclick="this.textContent='ENVIADO ✓';this.className='ok'">ADICIONAR</button></div>
+            <div class="pc"><div class="av">👩🏾</div><b>Camila Lima</b><br>27, Bahia<em>Trabalha na TechCorp</em><button onclick="this.textContent='ENVIADO ✓';this.className='ok'">ADICIONAR</button></div>
           </div>
         </div>
         <div class="box side">
@@ -45,31 +45,54 @@
 
       <div>
         <div class="box">
-          <div class="tabs">
-            <button class="on">Vagas de Emprego</button>
-            <button>Estágio</button>
-            <button>Home Office</button>
+          <div class="tabs job-tabs">
+            <button type="button" class="on" data-job-tab="employment" aria-selected="true">Vagas de Emprego</button>
+            <button type="button" data-job-tab="internships" aria-selected="false">Estágio</button>
           </div>
           <div class="inner">
-            <div class="post">
-              <h4>Empresa TchsIA</h4>
-              <b>Analista de TI Pleno</b><br>
-              💼 ESTAMOS CONTRATANDO!<br>
-              Buscamos um(a) Analista de TI Pleno para se juntar ao nosso time.<br>
-              ✅ Home office flexível<br>
-              ✅ Vale alimentação e saúde<br>
-              ✅ Plano de carreira estruturado
-              <div class="t">#VagaDeEmprego #Contratando #TI</div>
-            </div>
-            <div class="post">
-              <h4>Empresa TIinvest</h4>
-              <b>Desenvolvedor(a) Full Stack</b><br>
-              🚀 Venha para o nosso time!<br>
-              Procuramos um(a) Desenvolvedor(a) Full Stack apaixonado(a) por tecnologia para crescer junto com a gente.<br>
-              Requisitos: React, Node.js e vontade de aprender.<br>
-              📍 Remoto | CLT | Pleno/Sênior
-              <div class="t">#VagaDeEmprego #DevJobs #TrabalheConosco</div>
-            </div>
+            <section class="job-panel" data-job-panel="employment" aria-label="Vagas de emprego">
+              <article class="post">
+                <h4>Empresa TchsIA</h4>
+                <b>Analista de TI Pleno</b><br>
+                💼 ESTAMOS CONTRATANDO!<br>
+                Buscamos um(a) Analista de TI Pleno para se juntar ao nosso time.<br>
+                ✅ Home office flexível<br>
+                ✅ Vale alimentação e saúde<br>
+                ✅ Plano de carreira estruturado
+                <div class="t">#VagaDeEmprego #Contratando #TI</div>
+              </article>
+              <article class="post">
+                <h4>Empresa TIinvest</h4>
+                <b>Desenvolvedor(a) Full Stack</b><br>
+                🚀 Venha para o nosso time!<br>
+                Procuramos um(a) Desenvolvedor(a) Full Stack apaixonado(a) por tecnologia para crescer junto com a gente.<br>
+                Requisitos: React, Node.js e vontade de aprender.<br>
+                📍 Remoto | CLT | Pleno/Sênior
+                <div class="t">#VagaDeEmprego #DevJobs #TrabalheConosco</div>
+              </article>
+            </section>
+            <section class="job-panel" data-job-panel="internships" aria-label="Vagas de estágio" hidden>
+              <article class="post">
+                <h4>Empresa TchsIA</h4>
+                <b>Estagiário(a) de Desenvolvimento Web</b><br>
+                🌱 Venha aprender e crescer com nosso time!<br>
+                Apoie o desenvolvimento de interfaces web e participe de revisões de código com a equipe.<br>
+                ✅ Conhecimentos básicos de HTML, CSS e JavaScript<br>
+                ✅ Bolsa-auxílio e vale-transporte<br>
+                📍 Híbrido | 30 horas semanais
+                <div class="t">#Estágio #DesenvolvimentoWeb #Oportunidade</div>
+              </article>
+              <article class="post">
+                <h4>Empresa TIinvest</h4>
+                <b>Estagiário(a) de Suporte e Infraestrutura</b><br>
+                💻 Faça parte da equipe de tecnologia!<br>
+                Auxilie no atendimento interno, preparação de equipamentos e acompanhamento da infraestrutura.<br>
+                ✅ Estar cursando Tecnologia da Informação ou área relacionada<br>
+                ✅ Bolsa-auxílio, mentoria e horário flexível<br>
+                📍 Presencial |  manhã ou tarde
+                <div class="t">#Estágio #SuporteTI #Carreira</div>
+              </article>
+            </section>
           </div>
         </div>
       </div>

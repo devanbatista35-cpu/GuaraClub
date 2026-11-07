@@ -329,6 +329,40 @@ newsTabs.forEach((tab) => {
   });
 });
 
+const homeTabs = document.querySelectorAll('[data-home-tab]');
+const homePanels = document.querySelectorAll('[data-home-panel]');
+
+homeTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const selectedPanel = tab.dataset.homeTab;
+    homeTabs.forEach((item) => {
+      const isSelected = item === tab;
+      item.classList.toggle('on', isSelected);
+      item.setAttribute('aria-selected', String(isSelected));
+    });
+    homePanels.forEach((panel) => {
+      panel.hidden = panel.dataset.homePanel !== selectedPanel;
+    });
+  });
+});
+
+const jobTabs = document.querySelectorAll('[data-job-tab]');
+const jobPanels = document.querySelectorAll('[data-job-panel]');
+
+jobTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const selectedPanel = tab.dataset.jobTab;
+    jobTabs.forEach((item) => {
+      const isSelected = item === tab;
+      item.classList.toggle('on', isSelected);
+      item.setAttribute('aria-selected', String(isSelected));
+    });
+    jobPanels.forEach((panel) => {
+      panel.hidden = panel.dataset.jobPanel !== selectedPanel;
+    });
+  });
+});
+
 // Enviar Mensagem no Chat
 const sendBtn = document.getElementById('sendBtn');
 const inputMsg = document.getElementById('mi');

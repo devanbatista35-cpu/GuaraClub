@@ -743,6 +743,32 @@ input.f::placeholder {
   font-weight: 700;
 }
 
+.home-tabs button {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.home-panel[hidden] {
+  display: none;
+}
+
+.home-panel .post:last-child {
+  margin-bottom: 0;
+}
+
+.home-panel .post p {
+  margin: 6px 0 0;
+}
+
+.job-tabs button {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.job-panel[hidden] {
+  display: none;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
