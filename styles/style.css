@@ -253,6 +253,15 @@ input.f::placeholder {
   .cols:has(> div > .side) > div:first-child > .side {
     flex: 1;
   }
+
+  .cols:has(> div > .side) > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cols:has(> div > .side) > div:nth-child(2) > .box {
+    flex: 1;
+  }
 }
 
 .box {
