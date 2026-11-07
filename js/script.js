@@ -35,6 +35,12 @@ if (searchOpenButtons.length) {
   searchDialog.querySelector('[data-search-close]').addEventListener('click', () => {
     searchDialog.close();
   });
+  searchDialog.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      searchDialog.close();
+    }
+  });
   searchDialog.addEventListener('click', (event) => {
     if (event.target === searchDialog) searchDialog.close();
   });

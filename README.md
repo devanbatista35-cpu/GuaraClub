@@ -12,10 +12,12 @@ O GuaraClub é um protótipo de interface web responsiva, criado com HTML, CSS e
 - Área inicial com destaques e oportunidades.
 - Seções de comunidade, desenvolvedores, novidades e vagas.
 - Chat demonstrativo com envio de mensagens na própria página.
+- Abas interativas na Home, Comunidade, Novidades e Vagas, além de modal de pesquisa.
 - Alternância de tema nas páginas que exibem o controle correspondente.
 - Layout adaptável a diferentes tamanhos de tela.
 
 > **Nota:** este projeto é um protótipo front-end. Os formulários não autenticam nem criam contas, e as mensagens do chat não são salvas ou compartilhadas com outros usuários.
+> A pesquisa, as solicitações e a inscrição no mutirão também são demonstrações de interface: não consultam nem gravam dados em um servidor.
 
 ## Tecnologias
 
@@ -55,9 +57,9 @@ O arquivo `index.html` está na raiz e funciona como página inicial do site.
 ```text
 GuaraClub/
 ├── index.html              # Página inicial / login
-├── images/                 # Logos do projeto
+├── images/                 # Logos e fotos dos desenvolvedores
 ├── js/
-│   └── script.js           # Tema e interações do chat
+│   └── script.js           # Tema, navegação e interações das páginas
 ├── pages/
 │   ├── cadastro.html
 │   ├── chat.html
