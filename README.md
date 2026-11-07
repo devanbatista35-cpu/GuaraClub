@@ -4,7 +4,8 @@ Uma comunidade digital para estudantes e profissionais de tecnologia compartilha
 
 O GuaraClub é um protótipo de interface web responsiva, criado com HTML, CSS e JavaScript puro. A experiência apresenta páginas de comunidade, vagas, novidades e interação entre membros.
 
-🔗 **Acesse o site:** [devanbatista35-cpu.github.io/SQL_site](https://devanbatista35-cpu.github.io/GuaraClub/)
+🔗 **Acesse o site:** [devanbatista35-cpu.github.io/GuaraClub](https://devanbatista35-cpu.github.io/GuaraClub/)
+
 ## Funcionalidades
 
 - Páginas de login e cadastro para explorar os fluxos da interface.
