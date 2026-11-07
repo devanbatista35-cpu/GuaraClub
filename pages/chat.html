@@ -6,13 +6,16 @@
   <title>GuaraClub – Chat</title>
   <link rel="stylesheet" href="../styles/style.css">
 </head>
-<body>
+<body class="chat-page">
   <div class="app">
     <div class="top">
       <button class="pill" id="themeBtn">💡</button>
-      <a class="pill" href="home.html">☰ Home</a>
+      <a class="pill" href="home.html">🏠 Home</a>
       <button class="pill" onclick="alert('🔍 Pesquisa (protótipo)')">🔍 Pesquisa</button>
-      <nav class="nav">
+      <button class="pill menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="main-nav">
         <a href="sobre.html">Sobre</a>
         <a href="comunidade.html">Comunidade</a>
         <a href="vagas.html">Vagas</a>

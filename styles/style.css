@@ -20,8 +20,8 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #11101000;
-  --bg2: #5d5753;
+  --bg: #2f1a0a;
+  --bg2: #2f1a0a;
 }
 
 html {
@@ -213,6 +213,24 @@ input.f::placeholder {
 
 .nav a:hover, .nav a.on {
   color: var(--accent);
+}
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
 }
 
 .cols {
@@ -570,8 +588,15 @@ input.f::placeholder {
   .cols { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }
   .mut { grid-template-columns: 1fr; }
-  .nav { margin-left: 0; width: 100%; }
+  .top > .pill:not(.menu-toggle) { padding: 8px 12px; }
+  .menu-toggle { display: inline-flex; flex-direction: column; margin-left: auto; }
+  .nav { display: none; margin-left: 0; width: 100%; flex-direction: column; align-items: center; gap: 14px; padding: 12px 0; }
+  .nav.is-open { display: flex; }
+  .foot { flex-direction: column; align-items: center; }
+  .foot span { width: 100%; }
   .bub { max-width: 90%; }
+  .chat-page .tabs { gap: 8px; }
+  .chat-page .tabs button { flex: 1 1 calc(50% - 4px); min-width: 0; padding: 8px 6px; font-size: 15px; }
 }
 
 :focus-visible {

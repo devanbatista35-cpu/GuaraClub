@@ -8,6 +8,31 @@ if (themeBtn) {
   });
 }
 
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.getElementById('main-nav');
+
+if (menuToggle && navMenu) {
+  function setMenuOpen(isOpen) {
+    navMenu.classList.toggle('is-open', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+  }
+
+  menuToggle.addEventListener('click', () => {
+    setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
+  });
+
+  navMenu.addEventListener('click', (event) => {
+    if (event.target instanceof Element && event.target.closest('a')) {
+      setMenuOpen(false);
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setMenuOpen(false);
+  });
+}
+
 // Enviar Mensagem no Chat
 const sendBtn = document.getElementById('sendBtn');
 const inputMsg = document.getElementById('mi');
