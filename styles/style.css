@@ -116,7 +116,7 @@ button {
 }
 
 .panel form {
-  width: min(380px, 100%);
+  width: min(460px, 100%);
   text-align: left;
 }
 
@@ -129,13 +129,13 @@ label {
 
 input.f {
   width: 100%;
-  padding: 13px 16px;
+  padding: 15px 18px;
   border-radius: 14px;
   border: 0;
   background: #ffffff55;
   color: #fff;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   outline: none;
 }
 
@@ -1146,6 +1146,48 @@ input.f::placeholder {
   .bub { max-width: 90%; }
   .chat-page .tabs { gap: 8px; }
   .chat-page .tabs button { flex: 1 1 calc(50% - 4px); min-width: 0; padding: 8px 6px; font-size: 15px; }
+}
+
+@media(min-width: 861px) {
+  .signup-page .login {
+    height: 100vh;
+    height: 100svh;
+    min-height: 0;
+  }
+
+  .signup-page .panel {
+    padding: clamp(12px, 2.5vh, 28px);
+  }
+
+  .signup-page .logo {
+    width: clamp(72px, 11vh, 120px);
+    height: clamp(72px, 11vh, 120px);
+  }
+
+  .signup-page .panel h2 {
+    margin: clamp(4px, 1vh, 10px) 0 clamp(8px, 1.8vh, 18px);
+  }
+
+  .signup-page label {
+    margin-top: clamp(4px, .8vh, 10px);
+  }
+
+  .signup-page input.f {
+    padding: clamp(8px, 1.2vh, 15px) 18px;
+  }
+
+  .signup-page .go {
+    margin-top: clamp(10px, 1.8vh, 22px);
+    padding: clamp(9px, 1.2vh, 14px);
+  }
+
+  .signup-page .alt {
+    margin-top: clamp(6px, 1vh, 12px);
+  }
+
+  .signup-page .cp {
+    margin-top: clamp(10px, 2.2vh, 26px);
+  }
 }
 
 :focus-visible {
