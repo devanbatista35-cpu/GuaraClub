@@ -40,8 +40,20 @@ const chatArea = document.getElementById('chatArea');
 const threadHeader = document.getElementById('threadHeader');
 const threadName = document.getElementById('threadName');
 const backToConversations = document.getElementById('backToConversations');
+const requestPanel = document.getElementById('requestPanel');
 const chatTabs = document.querySelectorAll('[data-chat-tab]');
 const defaultThreadMarkup = chatArea ? chatArea.innerHTML : '';
+const messageRequests = [
+  { name: 'Mariana Alves', avatar: '👩🏾', preview: 'Oi! Vi seu perfil na comunidade e queria tirar uma dúvida.' },
+  { name: 'Pedro Costa', avatar: '🧔🏻', preview: 'Você pode me ajudar com uma questão de JavaScript?' },
+  { name: 'Julia Ferreira', avatar: '👩🏻', preview: 'Adorei seu projeto! Podemos conversar sobre ele?' },
+  { name: 'Lucas Rocha', avatar: '👨🏾', preview: 'Olá! Também estou começando na área de tecnologia.' }
+];
+const friendRequests = [
+  { name: 'Fernanda Melo', avatar: '👩🏾' },
+  { name: 'Gustavo Nunes', avatar: '🧔🏻' },
+  { name: 'Isabela Souza', avatar: '👩🏼‍🦱' }
+];
 const conversations = [
   {
     name: 'Ana Costa',
@@ -90,7 +102,7 @@ const conversations = [
   },
   {
     name: 'Rafael Lima',
-    avatar: '🧑🏻‍💻',
+    avatar: '👨🏻‍🦰',
     unread: 0,
     messages: [
       { from: 'them', text: 'Obrigado pelas dicas de portfólio!' },
@@ -101,6 +113,39 @@ const conversations = [
   }
 ];
 let selectedConversation = null;
+
+function renderRequests(containerId, requests, previewText) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  requests.forEach((request) => {
+    const item = document.createElement('div');
+    item.className = 'request-item';
+    const avatar = document.createElement('span');
+    avatar.className = 'conversation-avatar';
+    avatar.setAttribute('aria-hidden', 'true');
+    avatar.textContent = request.avatar;
+
+    const details = document.createElement('span');
+    details.className = 'conversation-details';
+    const name = document.createElement('b');
+    name.className = 'conversation-name';
+    name.textContent = request.name;
+    details.appendChild(name);
+    if (request.preview || previewText) {
+      const preview = document.createElement('span');
+      preview.className = 'conversation-preview';
+      preview.textContent = request.preview || previewText;
+      details.appendChild(preview);
+    }
+
+    item.append(avatar, details);
+    container.appendChild(item);
+  });
+}
+
+renderRequests('messageRequests', messageRequests);
+renderRequests('friendRequests', friendRequests, 'Quer se conectar com você.');
 
 function renderConversationList() {
   if (!conversationList) return;
@@ -187,12 +232,20 @@ if (conversationList && messageThread && chatArea) {
 
       if (tab.dataset.chatTab === 'messages') {
         conversationList.hidden = false;
+        if (requestPanel) requestPanel.hidden = true;
         messageThread.hidden = true;
         if (threadHeader) threadHeader.hidden = true;
         return;
       }
 
       conversationList.hidden = true;
+      if (requestPanel) requestPanel.hidden = tab.dataset.chatTab !== 'requests';
+      if (tab.dataset.chatTab === 'requests') {
+        messageThread.hidden = true;
+        if (threadHeader) threadHeader.hidden = true;
+        return;
+      }
+
       messageThread.hidden = false;
       if (threadHeader) threadHeader.hidden = true;
       chatArea.innerHTML = defaultThreadMarkup;
@@ -202,6 +255,7 @@ if (conversationList && messageThread && chatArea) {
   if (backToConversations) {
     backToConversations.addEventListener('click', () => {
       conversationList.hidden = false;
+      if (requestPanel) requestPanel.hidden = true;
       messageThread.hidden = true;
       if (threadHeader) threadHeader.hidden = true;
       renderConversationList();

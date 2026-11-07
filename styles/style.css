@@ -241,16 +241,16 @@ input.f::placeholder {
 }
 
 @media(min-width: 861px) {
-  .chat-page .cols {
+  .cols:has(> div > .side) {
     align-items: stretch;
   }
 
-  .chat-page .cols > div:first-child {
+  .cols:has(> div > .side) > div:first-child {
     display: flex;
     flex-direction: column;
   }
 
-  .chat-page .cols > div:first-child > .side {
+  .cols:has(> div > .side) > div:first-child > .side {
     flex: 1;
   }
 }
@@ -626,6 +626,10 @@ input.f::placeholder {
   background: linear-gradient(135deg, #1f3a4f, #14283a);
 }
 
+.vc.wine {
+  background: linear-gradient(135deg, #b85c78, #923f5d);
+}
+
 .vc b {
   display: block;
   font-size: 20px;
@@ -684,6 +688,11 @@ input.f::placeholder {
   display: flex;
   gap: 10px;
   align-items: flex-start;
+}
+
+.chat .av {
+  flex: 0 0 42px;
+  margin: 0;
 }
 
 .m.me {
