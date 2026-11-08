@@ -202,8 +202,13 @@ input.f::placeholder {
   border: 1px solid #fff6;
   color: #fff;
   border-radius: 999px;
-  padding: 10px 20px;
+  padding: 8px 14px;
   font-weight: 700;
+  font-size: 14px;
+}
+
+.top #themeBtn {
+  font-size: 14px;
 }
 
 .pill:hover, .pill.on {
@@ -388,6 +393,9 @@ input.f::placeholder {
 }
 
 .pc {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   background: #fff;
   color: #222;
   border-radius: 6px;
@@ -395,6 +403,7 @@ input.f::placeholder {
   text-align: center;
   font-size: 10px;
   min-width: 0;
+  height: 100%;
   overflow-wrap: anywhere;
 }
 
@@ -416,7 +425,8 @@ input.f::placeholder {
 }
 
 .pc button {
-  margin-top: 8px;
+  margin-top: auto;
+  padding-top: 8px;
   width: 100%;
   background: #2e73c4;
   color: #fff;
@@ -978,6 +988,7 @@ input.f::placeholder {
 .about p {
   line-height: 1.6;
   font-weight: 600;
+  font-size: 15px;
   margin: 0 0 16px;
 }
 
@@ -995,7 +1006,7 @@ input.f::placeholder {
 .about .about-lead {
   margin-bottom: 18px;
   color: #f3dcc0;
-  font-size: clamp(20px, 2.4vw, 28px);
+  font-size: clamp(18px, 2vw, 24px);
   font-weight: 800;
   line-height: 1.25;
   text-align: center;
@@ -1004,7 +1015,7 @@ input.f::placeholder {
 .about .about-signoff {
   margin: 22px 0 0;
   color: #f3dcc0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
   text-align: center;
 }
