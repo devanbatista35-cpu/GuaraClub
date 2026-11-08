@@ -379,12 +379,12 @@ input.f::placeholder {
 }
 
 .sug {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 4px;
   background: #ffffff40;
   padding: 5px;
   border-radius: 8px;
-  overflow: auto;
 }
 
 .pc {
@@ -394,8 +394,8 @@ input.f::placeholder {
   padding: 10px 7px;
   text-align: center;
   font-size: 12px;
-  min-width: 90px;
-  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .av {
