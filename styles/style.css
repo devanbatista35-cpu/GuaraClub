@@ -26,6 +26,13 @@
 
 html {
   scroll-padding-top: env(safe-area-inset-top, 0px);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 * {
@@ -349,6 +356,11 @@ input.f::placeholder {
   box-shadow: 0 8px 18px #0004;
 }
 
+.box:has(> .sug) {
+  border-color: #ffffff38;
+  box-shadow: 0 4px 12px #0002;
+}
+
 .box+.box {
   margin-top: 16px;
 }
@@ -378,38 +390,38 @@ input.f::placeholder {
   background: #fff;
   color: #222;
   border-radius: 6px;
-  padding: 8px 6px;
+  padding: 10px 7px;
   text-align: center;
-  font-size: 10px;
-  min-width: 82px;
+  font-size: 12px;
+  min-width: 90px;
   flex: 1;
 }
 
 .av {
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   margin: 0 auto 4px;
   display: grid;
   place-items: center;
-  font-size: 22px;
+  font-size: 25px;
   background: #e8d5c0;
 }
 
 .pc em {
   display: block;
   color: #666;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .pc button {
-  margin-top: 6px;
+  margin-top: 8px;
   width: 100%;
   background: #2e73c4;
   color: #fff;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
-  padding: 4px;
+  padding: 6px 4px;
   border-radius: 3px;
 }
 
@@ -484,8 +496,13 @@ input.f::placeholder {
   gap: 16px;
   overflow-y: auto;
   overscroll-behavior: contain;
+  scroll-behavior: smooth;
   scrollbar-color: #ffffff40 transparent;
   scrollbar-width: thin;
+}
+
+.request-section {
+  flex: 0 0 auto;
 }
 
 .request-panel::-webkit-scrollbar {
@@ -512,8 +529,8 @@ input.f::placeholder {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin: 4px 8px 8px;
-  font-size: 15px;
+  margin: 8px 8px 12px;
+  font-size: 17px;
 }
 
 .request-section h3 span {
@@ -530,8 +547,8 @@ input.f::placeholder {
 .request-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 9px 8px;
+  gap: 12px;
+  padding: 14px 10px;
   border: 1px solid #fff6;
 }
 
@@ -540,14 +557,15 @@ input.f::placeholder {
 }
 
 .request-item .conversation-avatar {
-  flex-basis: 40px;
-  width: 40px;
-  height: 40px;
-  font-size: 21px;
+  flex-basis: 48px;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
 }
 
 .request-item .conversation-preview {
   white-space: normal;
+  line-height: 1.4;
 }
 
 .conversation-item {
@@ -711,16 +729,18 @@ input.f::placeholder {
   display: block;
   margin-bottom: 6px;
   color: #f3dcc0;
-  font-size: 17px;
+  font-size: 22px;
 }
 
 .community-card p {
   margin: 0 0 8px;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 .community-tag {
   color: #f3dcc0;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -739,17 +759,32 @@ input.f::placeholder {
 
 .news-card h4 {
   color: #f3dcc0;
-  font-size: 17px;
+  font-size: 22px;
 }
 
 .news-card p {
   margin: 0 0 8px;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 .news-meta {
   color: #f3dcc0;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
+}
+
+.jobs-page .job-panel .post {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.jobs-page .job-panel .post h4 {
+  font-size: 22px;
+}
+
+.jobs-page .job-panel .post .t {
+  font-size: 16px;
 }
 
 .news-footer {
