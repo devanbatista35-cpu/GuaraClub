@@ -46,7 +46,7 @@ body {
   background: linear-gradient(var(--bg) 40%, var(--bg2));
   min-height: 100vh;
   background-attachment: fixed;
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 a {
