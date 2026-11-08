@@ -393,7 +393,7 @@ input.f::placeholder {
   border-radius: 6px;
   padding: 10px 7px;
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
   min-width: 0;
   overflow-wrap: anywhere;
 }
@@ -412,7 +412,7 @@ input.f::placeholder {
 .pc em {
   display: block;
   color: #666;
-  font-size: 11px;
+  font-size: 9px;
 }
 
 .pc button {
@@ -420,7 +420,7 @@ input.f::placeholder {
   width: 100%;
   background: #2e73c4;
   color: #fff;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 700;
   padding: 6px 4px;
   border-radius: 3px;
@@ -730,18 +730,18 @@ input.f::placeholder {
   display: block;
   margin-bottom: 6px;
   color: #f3dcc0;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .community-card p {
   margin: 0 0 8px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.6;
 }
 
 .community-tag {
   color: #f3dcc0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -760,32 +760,32 @@ input.f::placeholder {
 
 .news-card h4 {
   color: #f3dcc0;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .news-card p {
   margin: 0 0 8px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.6;
 }
 
 .news-meta {
   color: #f3dcc0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
 }
 
 .jobs-page .job-panel .post {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.6;
 }
 
 .jobs-page .job-panel .post h4 {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .jobs-page .job-panel .post .t {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .news-footer {
